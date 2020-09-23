@@ -1,5 +1,0 @@
-D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
-D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir
-D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)/TestingProject/CMakeFiles/edit_cache.dir
-D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)/TestingProject/CMakeFiles/TestingProject.dir
-D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)/TestingProject/CMakeFiles/rebuild_cache.dir
