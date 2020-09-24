@@ -1,9 +1,9 @@
-﻿#include<stdio.h>
+﻿#include<iostream>
 #include"mpi.h"
 
 int main()
 {
-    printf("Hello, world!\n");
+    //printf("Hello, world!\n");
 
     int my_rank, comm_sz;
 
@@ -11,7 +11,7 @@ int main()
     MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
 
-    printf("Processor %d of %d says hello!\n", my_rank, comm_sz);
+    std::cout << "Processor " << my_rank + 1 << " of " << comm_sz << " says hello!"<< std::endl;
 
     MPI_Finalize();
     return 0;
