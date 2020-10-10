@@ -39,7 +39,7 @@ include rules.ninja
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -50,7 +50,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI -BD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug"
+  COMMAND = cmd.exe /C "cd /D "D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI -B"D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -67,7 +67,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # Utility command for edit_cache
 
 build TestingProject\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug\TestingProject && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug (default)\TestingProject" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -115,7 +115,7 @@ build TestingProject\TestingProject.exe: CXX_EXECUTABLE_LINKER__TestingProject_D
 # Utility command for rebuild_cache
 
 build TestingProject\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug\TestingProject && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI -BD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug"
+  COMMAND = cmd.exe /C "cd /D "D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug (default)\TestingProject" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI -B"D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -135,14 +135,14 @@ build TestingProject.exe: phony TestingProject\TestingProject.exe
 # =============================================================================
 
 #############################################
-# Folder: D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug
+# Folder: D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)
 
 build all: phony TestingProject\all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug/TestingProject
+# Folder: D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)/TestingProject
 
 build TestingProject\all: phony TestingProject\TestingProject.exe
 

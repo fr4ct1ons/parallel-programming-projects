@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("OpenMPI")
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+#set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 #add_library(
 	#mpi SHARED IMPORTED

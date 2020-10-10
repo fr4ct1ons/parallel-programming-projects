@@ -53,7 +53,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "TestingProject::@72dff16952a89fcdcb7c",
-					"jsonFile" : "target-TestingProject-Debug-6b575adf60e9ccf9bd62.json",
+					"jsonFile" : "target-TestingProject-Debug-e44aa9aee1f067cf2547.json",
 					"name" : "TestingProject",
 					"projectIndex" : 0
 				}
@@ -63,7 +63,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug",
+		"build" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)",
 		"source" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI"
 	},
 	"version" : 

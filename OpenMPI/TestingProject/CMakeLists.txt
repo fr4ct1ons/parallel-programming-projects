@@ -15,9 +15,11 @@ find_package(MPI)
 
 include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
+target_link_libraries(TestingProject ${MPI_C_LIBRARIES})
+
 target_include_directories(TestingProject PUBLIC ${CMAKE_SOURCE_DIR}/GlobalIncludes)
 
 link_directories(${CMAKE_SOURCE_DIR}/GlobalSources)
 
-target_link_libraries(TestingProject ${MPI_C_LIBRARIES})
+
 #link_directories("GlobalSources")

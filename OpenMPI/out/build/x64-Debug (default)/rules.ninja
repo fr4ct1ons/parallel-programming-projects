@@ -47,7 +47,7 @@ rule CXX_EXECUTABLE_LINKER__TestingProject_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI -BD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug
+  command = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI -B"D:\Lucena\Documents\Repositories\parallel-programming-projects\OpenMPI\out\build\x64-Debug (default)"
   description = Re-running CMake...
   generator = 1
 
