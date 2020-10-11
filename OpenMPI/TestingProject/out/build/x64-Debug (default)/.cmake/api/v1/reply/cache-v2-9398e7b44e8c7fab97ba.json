@@ -23,7 +23,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)"
+			"value" : "d:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/TestingProject/out/build/x64-Debug (default)"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -499,7 +499,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI"
+			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/TestingProject"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -511,7 +511,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/install/x64-Debug (default)"
+			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/TestingProject/out/install/x64-Debug (default)"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "OpenMPI"
+			"value" : "Project"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -1462,7 +1462,7 @@
 			"value" : "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"
 		},
 		{
-			"name" : "OpenMPI_BINARY_DIR",
+			"name" : "Project_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1471,10 +1471,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)"
+			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/TestingProject/out/build/x64-Debug (default)"
 		},
 		{
-			"name" : "OpenMPI_SOURCE_DIR",
+			"name" : "Project_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1483,7 +1483,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI"
+			"value" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/TestingProject"
 		}
 	],
 	"kind" : "cache",

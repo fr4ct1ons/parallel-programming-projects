@@ -669,9 +669,6 @@
 			"path" : "out/build/x64-Debug (default)/CMakeFiles/3.17.20032601-MSVC_2/CMakeCXXCompiler.cmake"
 		},
 		{
-			"path" : "TestingProject/CMakeLists.txt"
-		},
-		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.17/Modules/FindMPI.cmake"
@@ -727,8 +724,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/out/build/x64-Debug (default)",
-		"source" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI"
+		"build" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/TestingProject/out/build/x64-Debug (default)",
+		"source" : "D:/Lucena/Documents/Repositories/parallel-programming-projects/OpenMPI/TestingProject"
 	},
 	"version" : 
 	{
