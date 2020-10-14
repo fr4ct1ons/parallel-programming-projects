@@ -4,6 +4,7 @@
 #include<cmath>
 #include<chrono>
 #include<cstdio>
+#include<fstream>
 
 long double Function(long double x)
 {
@@ -48,21 +49,23 @@ long double TrapezeAreaPerProcess(long double bottomBase, long double topBase, i
     return totalArea;
 }
 
-//long double b = 2500000000.0f;//Function end -- Serial worst case.
-//int n = 1680000000;// Number of trapezes (resolution) -- Serial worst case.
+//int n = 1400000000;// Number of trapezes (resolution) -- Serial worst case.
+//int n = 720000000; //Number of trapezes (resolution) -- Serial smallest case.
 
-//long double a = 0.0f; //Function start -- Square.
-//long double b = 20.0f; //Function end
-//long double n = 20; // Number of trapezes (resolution)
-
-int main()
+int main(int argc, char* argv[])
 {
     std::cout << std::fixed;
-    bool isParallel = false;
+
+    if (argc <= 1)
+    {
+        std::cout << "You must specify a problem size! Like so:" << "\n";
+        std::cout << argv[0] << " <size of problem>" << std::endl;
+        return 0;
+    }
 
     long double a = 0.0f; //Function start
     long double b = 200000000.0f; //Function end
-    int n =   1400000000; // Number of trapezes (resolution)
+    int n = std::stoi(argv[1]); // Number of trapezes (resolution)
                
     long double h = (b - a); // Height of the original trapeze
 
@@ -90,7 +93,20 @@ int main()
 
     std::cout << "Process duration: " << processDuration.count() << "\n";
 
-    std::cout << "Area: " << std::fixed << localIntegral << std::endl;
+    std::cout << "Area: " << std::fixed << localIntegral << "\n";
+    std::cout << "Number of trapezes: " << n << std::endl;
+
+    try
+    {
+        std::ofstream output("Results.csv", std::ofstream::app);
+
+        output << std::fixed << n << " , " << localIntegral << " , " << processDuration.count() << " , " << "SERIAL , 1"  << std::endl;
+        output.close();
+    }
+    catch (const std::exception& exc)
+    {
+        std::cerr << exc.what() << std::endl;
+    }
     
 
     return 0;
