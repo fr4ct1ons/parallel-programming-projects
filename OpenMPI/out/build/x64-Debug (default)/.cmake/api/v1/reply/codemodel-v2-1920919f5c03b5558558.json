@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"minimumCMakeVersion" : 
 					{
@@ -28,6 +29,21 @@
 					"source" : "TestingProject",
 					"targetIndexes" : 
 					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "Odd-Even Transposition sort",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Odd-Even Transposition sort",
+					"targetIndexes" : 
+					[
 						0,
 						1
 					]
@@ -40,18 +56,35 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "OpenMPI",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 2,
+					"id" : "OETS_PRLL::@3574f0fa955a55258ffa",
+					"jsonFile" : "target-OETS_PRLL-Debug-e3992d4d9c5b0a89b0cd.json",
+					"name" : "OETS_PRLL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "OETS_SRL::@3574f0fa955a55258ffa",
+					"jsonFile" : "target-OETS_SRL-Debug-9fce3f502572fad6501c.json",
+					"name" : "OETS_SRL",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "TestingProject_PRLL::@72dff16952a89fcdcb7c",

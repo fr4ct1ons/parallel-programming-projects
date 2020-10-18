@@ -18,3 +18,4 @@ project ("OpenMPI")
 
 # Include sub-projects.
 add_subdirectory ("TestingProject")
+add_subdirectory ("Odd-Even Transposition sort")

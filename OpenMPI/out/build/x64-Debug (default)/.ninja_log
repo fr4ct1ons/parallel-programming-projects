@@ -1,53 +1,41 @@
 # ninja log v5
-1	760	624081616	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-760	1823	624081617	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-1	542	624081828	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-543	1145	624081828	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-2	486	624081871	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-486	1251	624081872	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	506	624081893	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-506	1026	624081893	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	519	624081996	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-520	892	624081996	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	542	624082096	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-542	907	624082097	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-16	992	624321491	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-992	1767	624321491	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-2	565	624321691	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-565	1397	624321692	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-1	728	624321799	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-728	1482	624321799	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-12	708	624322118	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-708	1528	624322119	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	843	624322920	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-843	1579	624322921	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-2	669	624323202	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-669	1421	624323203	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-1	985	624326525	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-985	2146	624326526	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-2	634	624326623	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-634	1349	624326624	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-2	752	624326725	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-752	1147	624326725	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-2	718	624326767	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-718	1767	624326768	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-2	919	624327213	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-920	2118	624327214	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-1	726	624327219	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-726	1367	624327219	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	996	624331852	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-996	1905	624331853	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	677	624331866	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-678	1639	624331866	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-1	829	624332662	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-829	1389	624332663	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-1	702	624332771	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-702	1054	624332772	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	505	624332791	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-505	859	624332791	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-2	1132	624409299	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-1133	2017	624409299	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	605	624409314	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-605	964	624409314	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1	700	624409318	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-700	1548	624409319	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
+1	686	624761803	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+686	1392	624761804	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	778	624761892	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+778	1311	624761892	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+0	833	624762467	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
+833	1631	624762468	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
+1	717	624762492	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+718	1275	624762492	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	509	624762502	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+509	974	624762503	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	686	624762926	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+686	1086	624762926	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	655	624762960	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+655	1038	624762960	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	645	624762980	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+645	970	624762980	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	649	624763113	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+649	1130	624763113	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	464	624763124	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+464	992	624763125	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+16	762	624763904	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+2	774	624763904	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
+10	1073	624763949	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
+2	1156	624763949	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
+1	489	624764019	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+489	1317	624764020	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	472	624764156	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+472	1025	624764157	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	763	624765260	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+764	1314	624765260	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
+1	499	624765334	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+499	1046	624765335	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
+1	484	624765509	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+484	829	624765510	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
+1	500	624765592	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+500	812	624765592	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
+1	495	624765733	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+495	811	624765733	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
+1	467	624765756	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+467	784	624765756	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
