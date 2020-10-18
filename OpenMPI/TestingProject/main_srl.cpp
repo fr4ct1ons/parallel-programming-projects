@@ -111,37 +111,3 @@ int main(int argc, char* argv[])
 
     return 0;
 }
-
-/*if (my_rank != 0)
-{
-
-    std::cout << "Greetings! I am number " + std::to_string(my_rank) + ".";
-
-    strcpy(message, "Process something here.");
-
-    if (my_rank == 1)
-    {
-        strcpy(message, "PROCESS 2 REPORTING FOR DUTY!");
-    }
-    else if (my_rank == 2)
-    {
-        strcpy(message, "Process 3 here.");
-    }
-    std::cout << "Sending." << std::endl;
-    MPI_Send(message, 500, MPI_CHAR, 0, 0, MPI_COMM_WORLD);
-    std::cout << "Sent" << std::endl;
-}
-else
-{
-    int size;
-    MPI_Status status;
-
-    strcpy(message, "Greetings! I am number 0.");
-    std::cout << message << std::endl;
-
-    for (int procNum = 1; procNum < comm_sz ; procNum++)
-    {
-        MPI_Recv(message, 500, MPI_CHAR, procNum, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-        std::cout << message << std::endl;
-    }
-}*/
