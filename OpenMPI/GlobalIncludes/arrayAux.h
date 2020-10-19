@@ -11,4 +11,13 @@ namespace ArrayAux
         }
         std::cout << "}" << std::endl;
 	}
+
+    template<typename T> T* JoinArrays(T* arrayLeft, T* arrayRight, int arrayLeftSize, int arrayRightSize)
+    {
+        T* toReturn = new T[arrayLeftSize + arrayRightSize];
+        std::memcpy(toReturn, arrayLeft, sizeof(T) * arrayLeftSize);
+        std::memcpy(toReturn + arrayLeftSize, arrayRight, sizeof(T) * arrayRightSize);
+
+        return toReturn;
+    }
 }

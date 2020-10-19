@@ -14,7 +14,7 @@ namespace SortingAlgorithms
                 {
                     if (values[i - 1] > values[i])
                     {
-                        std::swap(values[i - 1], values[i]);
+                        Swap<T>(&values[i - 1], &values[i]);
                     }
                 }
             }
@@ -24,10 +24,18 @@ namespace SortingAlgorithms
                 {
                     if (values[i] > values[i + 1])
                     {
-                        std::swap(values[i], values[i + 1]);
+                        Swap<T>(&values[i], &values[i + 1]);
                     }
                 }
             }
         }
 	}
+
+    template<typename T> void Swap(T* a, T* b)
+    {
+        /*T temp = *b;
+        *b = *a;
+        *a = temp;*/
+        std::swap(*a, *b);
+    }
 }

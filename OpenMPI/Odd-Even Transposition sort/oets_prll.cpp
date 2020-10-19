@@ -7,6 +7,7 @@
 #include<fstream>
 
 #include"arrayAux.h"
+#include"sortingAlgorithms.h"
 
 int main(int argc, char* argv[])
 {
@@ -20,6 +21,7 @@ int main(int argc, char* argv[])
 
     int n = 0;
     int *generatedValues;
+    std::chrono::system_clock::time_point startTime;
 
     if (argc <= 1)
     {
@@ -58,9 +60,88 @@ int main(int argc, char* argv[])
         //MPI_Scatter(generatedValues, n / comm_sz, MPI_INT, localValues, n / comm_sz, MPI_INT, 0, MPI_COMM_WORLD); //Receive the values
     }
 
+    if (my_rank == 0)
+    {
+        startTime = std::chrono::system_clock::now();
+    }
+
     MPI_Scatter(generatedValues, localN, MPI_INT, localValues, localN, MPI_INT, 0, MPI_COMM_WORLD); //Send the values
 
+    SortingAlgorithms::OddEvenTranspositionSort<int>(localValues, localN);
+
+    for (int i = 0; i < localN; i++)
+    {
+        if (i % 2 == 0) // Is even phase
+        {
+            //std::cout << "EVEN PHASE " << std::endl;
+            if (my_rank % 2 != 0) //Is odd process
+            {
+                MPI_Send(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD);
+                MPI_Recv(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+            }
+            else// is even process
+            {
+                int* tempValues = new int[localN];
+
+                MPI_Recv(tempValues, localN, MPI_INT, my_rank + 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+                int* jointValues = ArrayAux::JoinArrays<int>(localValues, tempValues, localN, localN);
+                std::cout << "Joint values before sorting, for process " << my_rank << ": ";
+                ArrayAux::PrintArrayValues<int>(jointValues, localN * 2);
+
+                SortingAlgorithms::OddEvenTranspositionSort(jointValues, localN * 2);
+
+                std::cout << "Joint values after sorting, for process " << my_rank << ": ";
+                ArrayAux::PrintArrayValues<int>(jointValues, localN * 2);
+
+                MPI_Send(jointValues + localN, localN, MPI_INT, my_rank + 1, 0, MPI_COMM_WORLD);
+            }
+        }
+        else
+        {
+            //std::cout << "ODD PHASE " << std::endl;
+            if (my_rank % 2 != 0) //Is odd process
+            {
+                if (my_rank != comm_sz - 1)
+                {
+                    int* tempValues = new int[localN];
+
+                    MPI_Recv(tempValues, localN, MPI_INT, my_rank + 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+                    int* jointValues = ArrayAux::JoinArrays<int>(localValues, tempValues, localN, localN);
+                    std::cout << "Joint values before sorting, for process " << my_rank << ": ";
+                    ArrayAux::PrintArrayValues<int>(jointValues, localN * 2);
+
+                    SortingAlgorithms::OddEvenTranspositionSort(jointValues, localN * 2);
+
+                    std::cout << "Joint values after sorting, for process " << my_rank << ": ";
+                    ArrayAux::PrintArrayValues<int>(jointValues, localN * 2);
+
+                    MPI_Send(jointValues + localN, localN, MPI_INT, my_rank + 1, 0, MPI_COMM_WORLD);
+                }
+            }
+            else// is even process
+            {
+                MPI_Send(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD);
+                MPI_Recv(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+            }
+        }
+
+        MPI_Barrier(MPI_COMM_WORLD);
+    }
+
+    int* finalValues = new int[n];
+
+    std::cout << "Process of number " << my_rank << " will send: ";
     ArrayAux::PrintArrayValues<int>(localValues, localN);
+
+    MPI_Gather(localValues, localN, MPI_INT, finalValues, localN, MPI_INT, 0, MPI_COMM_WORLD);
+    
+    if (my_rank == 0)
+    {
+        ArrayAux::PrintArrayValues<int>(finalValues, n);
+    }
+    //ArrayAux::PrintArrayValues<int>(localValues, localN);
 
     MPI_Finalize();
     return 0;
