@@ -69,8 +69,10 @@ int main(int argc, char* argv[])
 
     SortingAlgorithms::OddEvenTranspositionSort<int>(localValues, localN);
 
-    for (int i = 0; i < localN; i++)
+    for (int i = 0; i < comm_sz; i++)
     {
+        //std::cout << "NEW PHASE - Current phase: " << i << " Current values for process " << my_rank << ": ";
+        //ArrayAux::PrintArrayValues<int>(localValues, localN);
         if (i % 2 == 0) // Is even phase
         {
             //std::cout << "EVEN PHASE " << std::endl;
@@ -93,6 +95,13 @@ int main(int argc, char* argv[])
 
                 std::cout << "Joint values after sorting, for process " << my_rank << ": ";
                 ArrayAux::PrintArrayValues<int>(jointValues, localN * 2);
+
+                std::cout << "Values of process " << my_rank << " before copying: ";
+                ArrayAux::PrintArrayValues<int>(localValues, localN);
+                std::memcpy(localValues, jointValues, sizeof(int) * localN);
+
+                std::cout << "Values of process " << my_rank << " after copying: ";
+                ArrayAux::PrintArrayValues<int>(localValues, localN);
 
                 MPI_Send(jointValues + localN, localN, MPI_INT, my_rank + 1, 0, MPI_COMM_WORLD);
             }
@@ -117,16 +126,35 @@ int main(int argc, char* argv[])
                     std::cout << "Joint values after sorting, for process " << my_rank << ": ";
                     ArrayAux::PrintArrayValues<int>(jointValues, localN * 2);
 
+                    std::cout << "Values of process " << my_rank << " before copying: ";
+                    ArrayAux::PrintArrayValues<int>(localValues, localN);
+                    std::memcpy(localValues, jointValues, sizeof(int) * localN);
+
+                    std::cout << "Values of process " << my_rank << " after copying: ";
+                    ArrayAux::PrintArrayValues<int>(localValues, localN);
+
                     MPI_Send(jointValues + localN, localN, MPI_INT, my_rank + 1, 0, MPI_COMM_WORLD);
                 }
             }
-            else// is even process
+            else // is even process
             {
-                MPI_Send(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD);
-                MPI_Recv(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                if (comm_sz == 2)
+                {
+                    if (my_rank != 0)
+                    {
+                        MPI_Send(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD);
+                        MPI_Recv(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                    }
+                }
+                else
+                {
+                    MPI_Send(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD);
+                    MPI_Recv(localValues, localN, MPI_INT, my_rank - 1, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                }
             }
         }
-
+        std::cout << "END OF PHASE " << i << " - Values for process " << my_rank << " are: ";
+        ArrayAux::PrintArrayValues(localValues, localN);
         MPI_Barrier(MPI_COMM_WORLD);
     }
 
