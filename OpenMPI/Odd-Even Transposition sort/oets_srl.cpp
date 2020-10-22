@@ -7,6 +7,7 @@
 
 #include"testingAux.h"
 #include"sortingAlgorithms.h"
+#include "arrayAux.h"
 
 //n = 72000; // Serial worst case.
 //n = 51000; // Serial smallest case.
@@ -46,6 +47,8 @@ int main(int argc, char* argv[])
     }
     std::cout << " }" << std::endl;*/
 
+    ArrayAux::PrintArrayValues<int>(values, n);
+
     std::chrono::system_clock::time_point startTime;
 
     startTime = std::chrono::system_clock::now();
@@ -57,6 +60,7 @@ int main(int argc, char* argv[])
 
     std::chrono::duration<long double> processDuration = endTime - startTime;
 
+    ArrayAux::PrintArrayValues<int>(values, n);
     std::cout << "Problem size: " << n << "\n";
     std::cout << "Process duration: " << processDuration.count() << std::endl;
 

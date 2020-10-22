@@ -38,3 +38,9 @@
 487	1099	625018796	Odd-Even Transposition sort/OETS_SRL.exe	dcb69bcd0bf2b6f3
 1	713	625018815	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	510472f00387018d
 713	1102	625018816	Odd-Even Transposition sort/OETS_SRL.exe	dcb69bcd0bf2b6f3
+1	953	625033044	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	510472f00387018d
+953	1652	625033045	Odd-Even Transposition sort/OETS_SRL.exe	dcb69bcd0bf2b6f3
+2	818	625033076	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	a31f3f3a96b46d0
+818	1839	625033077	Odd-Even Transposition sort/OETS_PRLL.exe	f2b151f50d0612ef
+1	531	625033153	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	a31f3f3a96b46d0
+531	887	625033153	Odd-Even Transposition sort/OETS_PRLL.exe	f2b151f50d0612ef

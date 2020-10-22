@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
             val--;
         }
 
-        //ArrayAux::PrintArrayValues<int>(generatedValues, n);
+        ArrayAux::PrintArrayValues<int>(generatedValues, n);
 
         //MPI_Scatter(generatedValues, n / comm_sz, MPI_INT, localValues, n / comm_sz, MPI_INT, 0, MPI_COMM_WORLD); //Send the values
     }
@@ -196,13 +196,14 @@ int main(int argc, char* argv[])
         std::chrono::duration<long double> processDuration = endTime - startTime;
 
         std::cout << "Problem size: " << n << "\n";
-        std::cout << "Process duration: " << processDuration.count() << std::endl;
+        std::cout << "Process duration: " << processDuration.count() << "\n";
+        ArrayAux::PrintArrayValues<int>(finalValues, n);
 
-        std::stringstream output;
+        /*std::stringstream output;
 
         output << n << " , " << processDuration.count() << " , " << "PARALLEL" << " , " << comm_sz << std::endl;
 
-        TestingAux::WriteToResults(output);
+        TestingAux::WriteToResults(output);*/
     }
     //ArrayAux::PrintArrayValues<int>(localValues, localN);
 
