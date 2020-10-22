@@ -4,7 +4,14 @@
 #include<chrono>
 #include<cstdio>
 #include<fstream>
+
+#include"testingAux.h"
 #include"sortingAlgorithms.h"
+
+//n = 72000; // Serial worst case.
+//n = 51000; // Serial smallest case.
+//n = 24000; // Extra case 1.
+//n = 30000; //Extra case 2.
 
 int main(int argc, char* argv[])
 {
@@ -32,12 +39,12 @@ int main(int argc, char* argv[])
         }
     }
 
-    std::cout << "{ ";
+    /*std::cout << "{ ";
     for (int j = 0; j < n; j++)
     {
         std::cout << values[j] << " ";
     }
-    std::cout << " }" << std::endl;
+    std::cout << " }" << std::endl;*/
 
     std::chrono::system_clock::time_point startTime;
 
@@ -45,18 +52,19 @@ int main(int argc, char* argv[])
 
     SortingAlgorithms::OddEvenTranspositionSort<int>(values, n); // Sorting values
 
+    //ArrayAux::PrintArrayValues<int>(finalValues, n);
     auto endTime = std::chrono::system_clock::now();
 
     std::chrono::duration<long double> processDuration = endTime - startTime;
 
-    std::cout << "Process duration: " << processDuration.count() << "\n";
+    std::cout << "Problem size: " << n << "\n";
+    std::cout << "Process duration: " << processDuration.count() << std::endl;
 
-    std::cout << "{ ";
-    for (int j = 0; j < n; j++)
-    {
-        std::cout << values[j] << " ";
-    }
-    std::cout << "}" << std::endl;
+    std::stringstream output;
+
+    output << std::fixed << n << " , " << processDuration.count() << " , " << "SERIAL" << " , " << 1 << std::endl;
+
+    TestingAux::WriteToResults(output);
 
     return 0;
 }

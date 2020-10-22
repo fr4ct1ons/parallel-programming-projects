@@ -175,9 +175,25 @@ build cmake_object_order_depends_target_OETS_PRLL_Debug: phony || Odd-Even$ Tran
 
 build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\oets_prll.cpp.obj: CXX_COMPILER__OETS_PRLL_Debug ..\..\..\Odd-Even$ Transposition$ sort\oets_prll.cpp || cmake_object_order_depends_target_OETS_PRLL_Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\GlobalIncludes -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include"
+  INCLUDES = -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -I..\..\..\GlobalIncludes
   OBJECT_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir"
   OBJECT_FILE_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir"
+  TARGET_COMPILE_PDB = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir\\"
+  TARGET_PDB = "Odd-Even Transposition sort\OETS_PRLL.pdb"
+
+build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\__\GlobalSources\empty.cpp.obj: CXX_COMPILER__OETS_PRLL_Debug ..\..\..\GlobalSources\empty.cpp || cmake_object_order_depends_target_OETS_PRLL_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -I..\..\..\GlobalIncludes
+  OBJECT_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir"
+  OBJECT_FILE_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir\__\GlobalSources"
+  TARGET_COMPILE_PDB = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir\\"
+  TARGET_PDB = "Odd-Even Transposition sort\OETS_PRLL.pdb"
+
+build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\__\GlobalSources\testingAux.cpp.obj: CXX_COMPILER__OETS_PRLL_Debug ..\..\..\GlobalSources\testingAux.cpp || cmake_object_order_depends_target_OETS_PRLL_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -I..\..\..\GlobalIncludes
+  OBJECT_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir"
+  OBJECT_FILE_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir\__\GlobalSources"
   TARGET_COMPILE_PDB = "Odd-Even Transposition sort\CMakeFiles\OETS_PRLL.dir\\"
   TARGET_PDB = "Odd-Even Transposition sort\OETS_PRLL.pdb"
 
@@ -189,7 +205,7 @@ build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\oets_prll.cpp.obj: 
 #############################################
 # Link the executable Odd-Even Transposition sort\OETS_PRLL.exe
 
-build Odd-Even$ Transposition$ sort\OETS_PRLL.exe: CXX_EXECUTABLE_LINKER__OETS_PRLL_Debug Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\oets_prll.cpp.obj | C$:\Program$ Files$ (x86)\Microsoft$ SDKs\MPI\Lib\x64\msmpi.lib
+build Odd-Even$ Transposition$ sort\OETS_PRLL.exe: CXX_EXECUTABLE_LINKER__OETS_PRLL_Debug Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\oets_prll.cpp.obj Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\__\GlobalSources\empty.cpp.obj Odd-Even$ Transposition$ sort\CMakeFiles\OETS_PRLL.dir\__\GlobalSources\testingAux.cpp.obj | C$:\Program$ Files$ (x86)\Microsoft$ SDKs\MPI\Lib\x64\msmpi.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = "C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64\msmpi.lib"  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -223,9 +239,25 @@ build cmake_object_order_depends_target_OETS_SRL_Debug: phony || Odd-Even$ Trans
 
 build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\oets_srl.cpp.obj: CXX_COMPILER__OETS_SRL_Debug ..\..\..\Odd-Even$ Transposition$ sort\oets_srl.cpp || cmake_object_order_depends_target_OETS_SRL_Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\GlobalIncludes -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include"
+  INCLUDES = -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -I..\..\..\GlobalIncludes
   OBJECT_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir"
   OBJECT_FILE_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir"
+  TARGET_COMPILE_PDB = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir\\"
+  TARGET_PDB = "Odd-Even Transposition sort\OETS_SRL.pdb"
+
+build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\__\GlobalSources\empty.cpp.obj: CXX_COMPILER__OETS_SRL_Debug ..\..\..\GlobalSources\empty.cpp || cmake_object_order_depends_target_OETS_SRL_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -I..\..\..\GlobalIncludes
+  OBJECT_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir"
+  OBJECT_FILE_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir\__\GlobalSources"
+  TARGET_COMPILE_PDB = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir\\"
+  TARGET_PDB = "Odd-Even Transposition sort\OETS_SRL.pdb"
+
+build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\__\GlobalSources\testingAux.cpp.obj: CXX_COMPILER__OETS_SRL_Debug ..\..\..\GlobalSources\testingAux.cpp || cmake_object_order_depends_target_OETS_SRL_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include" -I..\..\..\GlobalIncludes
+  OBJECT_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir"
+  OBJECT_FILE_DIR = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir\__\GlobalSources"
   TARGET_COMPILE_PDB = "Odd-Even Transposition sort\CMakeFiles\OETS_SRL.dir\\"
   TARGET_PDB = "Odd-Even Transposition sort\OETS_SRL.pdb"
 
@@ -237,7 +269,7 @@ build Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\oets_srl.cpp.obj: CX
 #############################################
 # Link the executable Odd-Even Transposition sort\OETS_SRL.exe
 
-build Odd-Even$ Transposition$ sort\OETS_SRL.exe: CXX_EXECUTABLE_LINKER__OETS_SRL_Debug Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\oets_srl.cpp.obj | C$:\Program$ Files$ (x86)\Microsoft$ SDKs\MPI\Lib\x64\msmpi.lib
+build Odd-Even$ Transposition$ sort\OETS_SRL.exe: CXX_EXECUTABLE_LINKER__OETS_SRL_Debug Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\oets_srl.cpp.obj Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\__\GlobalSources\empty.cpp.obj Odd-Even$ Transposition$ sort\CMakeFiles\OETS_SRL.dir\__\GlobalSources\testingAux.cpp.obj | C$:\Program$ Files$ (x86)\Microsoft$ SDKs\MPI\Lib\x64\msmpi.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = "C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64\msmpi.lib"  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

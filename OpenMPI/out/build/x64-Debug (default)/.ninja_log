@@ -1,11 +1,40 @@
 # ninja log v5
-2	1156	624763949	TestingProject/TestingProject_SRL.exe	52bab75a4ee95bfa
-1111	1839	624845489	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
-2	774	624763904	TestingProject/CMakeFiles/TestingProject_SRL.dir/main_srl.cpp.obj	ac004d03172a483a
-1	1111	624845488	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
-1	677	624769504	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
-677	1092	624769504	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
-0	833	624762467	TestingProject/CMakeFiles/TestingProject_PRLL.dir/main_prll.cpp.obj	6e35af185c349fcc
-833	1631	624762468	TestingProject/TestingProject_PRLL.exe	18411dc089da1304
-1	839	624845601	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
-839	1302	624845601	Odd-Even Transposition sort/OETS_PRLL.exe	1e23806d22c14365
+1	722	625017637	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	51961b80aebee912
+722	1786	625017638	Odd-Even Transposition sort/OETS_SRL.exe	f269cd93c60609fb
+1	522	625017652	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+3	15152	625017707	build.ninja	de12d30ea296fbdd
+1	14530	625017732	build.ninja	de12d30ea296fbdd
+1	15305	625017801	build.ninja	de12d30ea296fbdd
+2	76	625017802	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/__/GlobalSources/empty.cpp.obj	f48cd9555fe7fb94
+1	14820	625017854	build.ninja	de12d30ea296fbdd
+1	551	625017855	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+0	21	0	clean	eeac665b4a503401
+7	283	625017903	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/__/GlobalSources/empty.cpp.obj	f48cd9555fe7fb94
+12	541	625017903	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/__/GlobalSources/testingAux.cpp.obj	4372fa495b6cbbc7
+2	575	625017903	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+1	489	625017947	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	68454ffd78b3010a
+1	14772	625017997	build.ninja	de12d30ea296fbdd
+1	15858	625018185	build.ninja	de12d30ea296fbdd
+1	14500	625018241	build.ninja	de12d30ea296fbdd
+18	86	625018241	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/__/GlobalSources/empty.cpp.obj	93b7a9d3affbd3a8
+2	499	625018242	Odd-Even Transposition sort/CMakeFiles/sourceLibs.dir/__/GlobalSources/testingAux.cpp.obj	46d8306bfcb7052b
+10	552	625018242	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/__/GlobalSources/testingAux.cpp.obj	8b4b127431562079
+26	555	625018242	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	a31f3f3a96b46d0
+544	704	625018242	Odd-Even Transposition sort/sourceLibs.lib	58c99fb83d09e643
+7	763	625018336	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/__/GlobalSources/testingAux.cpp.obj	8b4b127431562079
+1	765	625018336	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	a31f3f3a96b46d0
+11	766	625018336	Odd-Even Transposition sort/CMakeFiles/sourceLibs.dir/__/GlobalSources/testingAux.cpp.obj	46d8306bfcb7052b
+766	882	625018336	Odd-Even Transposition sort/sourceLibs.lib	58c99fb83d09e643
+882	1943	625018337	Odd-Even Transposition sort/OETS_PRLL.exe	2329cc24f9051261
+1	15843	625018414	build.ninja	de12d30ea296fbdd
+1	669	625018414	Odd-Even Transposition sort/OETS_PRLL.exe	f2b151f50d0612ef
+1	690	625018594	Odd-Even Transposition sort/CMakeFiles/OETS_PRLL.dir/oets_prll.cpp.obj	a31f3f3a96b46d0
+690	1338	625018594	Odd-Even Transposition sort/OETS_PRLL.exe	f2b151f50d0612ef
+19	83	625018727	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/__/GlobalSources/empty.cpp.obj	17416b920a86d092
+10	463	625018727	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/__/GlobalSources/testingAux.cpp.obj	f69fdef1b62a179c
+1	493	625018727	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	510472f00387018d
+493	911	625018727	Odd-Even Transposition sort/OETS_SRL.exe	dcb69bcd0bf2b6f3
+1	487	625018796	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	510472f00387018d
+487	1099	625018796	Odd-Even Transposition sort/OETS_SRL.exe	dcb69bcd0bf2b6f3
+1	713	625018815	Odd-Even Transposition sort/CMakeFiles/OETS_SRL.dir/oets_srl.cpp.obj	510472f00387018d
+713	1102	625018816	Odd-Even Transposition sort/OETS_SRL.exe	dcb69bcd0bf2b6f3
