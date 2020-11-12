@@ -1,6 +1,10 @@
 #include<iostream>
 #include<cstdio>
-#include<chrono>
+#include<ctime>
+//#include<chrono>
+#include<sstream>
+
+#include"testingAux.h"
 
 #include"Matrix.hpp"
 
@@ -93,7 +97,11 @@ int main(int argc, char const *argv[])
 {
     std::cout << std::fixed;
 
-    const int problemSize = 4 * 80;
+    int unformattedSize = std::atoi(argv[2]);
+
+    const int problemSize = 4 * unformattedSize;
+
+    std::string programType = argv[1];
 
     Matrix<double> multA(problemSize, problemSize);
     Matrix<double> multB(problemSize, problemSize);
@@ -115,21 +123,32 @@ int main(int argc, char const *argv[])
     //std::cout << "Current values in multA: \n" << multA.ToString() << std::endl;
     //std::cout << "Current values in multB: \n" << multB.ToString() << std::endl;
 
-    std::cout << "Current values in result: \n" << result.ToString() << std::endl;
+    void (*methodToCall)(Matrix<double>, Matrix<double>, Matrix<double>&);
 
-    auto startTime = std::chrono::system_clock::now();
-
-    Srl_MatMulDumb_double(multA, multB, result);
+    if(programType == "-random")
+    {
+        methodToCall = &Srl_MatMulDumb_double;
+    }
+    else
+    {
+        methodToCall = &Srl_MatMul_double;
+    }
     
-    auto endTime = std::chrono::system_clock::now();
+    //std::cout << "Current values in result: \n" << result.ToString() << std::endl;
 
-    std::chrono::duration<long double> processDuration = endTime - startTime;
+    clock_t startTime = clock();
+
+    methodToCall(multA, multB, result);
+    
+    clock_t endTime = clock();
+
+    double processDuration = (double)(endTime - startTime)/ CLOCKS_PER_SEC;
 
     //std::cout << "Process duration: " << processDuration.count() << "\n";
+    std::stringstream results;
+    results << std::fixed << problemSize << " , " << processDuration << " , " << "SERIAL_" << programType << " , " << 1 << std::endl;
 
-    std::cout << "Finished multiplication. Current values in result: \n" << result.ToString() << std::endl;
-
-    std::cout << "Finished multiplication. Duration: " << processDuration.count() << std::endl;
+    TestingAux::WriteToResults(results);
 
     return 0;
 }

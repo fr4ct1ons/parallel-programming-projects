@@ -6,6 +6,7 @@
         }
     ],
     "files.associations": {
+        "*.svelte": "html",
         "array": "cpp",
         "*.tcc": "cpp",
         "cctype": "cpp",
@@ -48,6 +49,23 @@
         "memory": "cpp",
         "memory_resource": "cpp",
         "random": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "chrono": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "cstring": "cpp",
+        "ios": "cpp",
+        "ratio": "cpp",
+        "xfacet": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp",
+        "ctime": "cpp"
     }
 }

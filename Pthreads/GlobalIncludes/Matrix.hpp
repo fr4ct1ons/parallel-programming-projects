@@ -6,7 +6,7 @@
 template<typename T> class Matrix
 {
 private:
-    size_t columns = 0, lines = 0;
+    size_t columns, lines;
 public:
     T **data;
 
