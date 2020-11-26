@@ -3,7 +3,6 @@
 #include<pthread.h>
 #include<cstdio>
 #include"Histogram.hpp"
-#include<array>
 #include<vector>
 
 namespace HistogramParallel

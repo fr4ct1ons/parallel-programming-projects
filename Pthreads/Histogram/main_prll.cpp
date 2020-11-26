@@ -1,23 +1,33 @@
 #include<iostream>
 #include<cstdio>
+#include<cstdlib>
 #include"HistogramParallel.hpp"
 #include"Histogram.hpp"
+#include<sstream>
+
+#include"testingAux.h"
 
 int main(int argc, char const *argv[])
 {
-    std::cout << "Helo, world!" << std::endl;
+    //std::cout << "Helo, world!" << std::endl;
     
     long dataSize = 20;
     bool isDebugEnabled = false;
-
+    long coreAmount = 4;
+    
     if(argc > 1)
     {
-        dataSize = std::stoi(argv[1]);
+        coreAmount = atoi(argv[1]);
     }
 
     if(argc > 2)
     {
-        long temp = std::stoi(argv[2]);
+        dataSize = atoi(argv[2]);
+    }
+
+    if(argc > 3)
+    {
+        long temp = atoi(argv[3]);
         
         if(temp == 1)
             isDebugEnabled = true;
@@ -46,17 +56,23 @@ int main(int argc, char const *argv[])
 
     clock_gettime(CLOCK_MONOTONIC, &startTime);
 
-    HistogramParallel::ParallelAnalyze(&test, data, 4);
+    HistogramParallel::ParallelAnalyze(&test, data, coreAmount);
 
     clock_gettime(CLOCK_MONOTONIC, &endTime);
 
     double processDuration = endTime.tv_sec - startTime.tv_sec;
     processDuration += (endTime.tv_nsec - startTime.tv_nsec) / 1000000000.0;
 
+    std::stringstream results;
+    results << std::fixed << formattedDataSize << " , " << processDuration << " , " << "PARALLEL , " << coreAmount << std::endl;
+
     if(isDebugEnabled)
     {
         std::cout << *HistogramParallel::currentHistogram << '\n';
-        std::cout << "Duration: " << processDuration << std::endl;
+        std::cout << results.str() << std::endl;
     }
+
+    TestingAux::WriteToResults(results);
+
     return 0;
 }

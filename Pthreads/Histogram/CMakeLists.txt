@@ -15,8 +15,9 @@ include_directories(${CMAKE_SOURCE_DIR}/GlobalIncludes)
 
 target_link_libraries(Histogram_PRLL pthread)
 target_link_libraries(Histogram_PRLL rt)
-target_include_directories(MatMult_PRLL PUBLIC ${CMAKE_SOURCE_DIR}/GlobalIncludes)
+#target_include_directories(MatMult_PRLL PUBLIC ${CMAKE_SOURCE_DIR}/GlobalIncludes)
 
+#SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
 
 target_include_directories(Histogram_PRLL PUBLIC ${CMAKE_SOURCE_DIR}/GlobalIncludes)
 target_include_directories(Histogram_PRLL PUBLIC include)
