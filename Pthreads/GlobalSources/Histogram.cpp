@@ -60,7 +60,10 @@ std::ostream& operator<<(std::ostream &os, const Histogram &hist)
 
     for (size_t i = 1; i < hist.rangeCount; i++)
     {
-        os << hist.ranges[i - 1] << " - " << hist.ranges[i] << ": " << hist.amountInRange[i - 1] << '\n';
+        if(hist.amountInRange[i - 1] != 0)
+        {
+            os << hist.ranges[i - 1] << " - " << hist.ranges[i] << ": " << hist.amountInRange[i - 1] << '\n';
+        }
     }
     
     return os;
