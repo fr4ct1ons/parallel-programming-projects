@@ -79,16 +79,16 @@ int main(int argc, char const *argv[])
     }
 
     omp_lock_t **locks = new omp_lock_t*[image.VertSize()];
-    bool **wasModified = new bool*[image.VertSize()];
+    //bool **wasModified = new bool*[image.VertSize()];
 
     for (long l = 0; l < image.VertSize(); l++)
     {
         locks[l] = new omp_lock_t[image.HorizSize()];
-        wasModified[l] = new bool[image.HorizSize()];
+        //wasModified[l] = new bool[image.HorizSize()];
         for (size_t w = 0; w < image.HorizSize(); w++)
         {
             omp_init_lock(&locks[l][w]);
-            wasModified[l][w] = false;
+            //wasModified[l][w] = false;
         }
         
     }
@@ -115,8 +115,8 @@ int main(int argc, char const *argv[])
                         if(!(h < 0 || h >= image.VertSize() ||
                            w < 0 || w >= image.HorizSize()))
                         {
-                            omp_set_lock(&locks[h][w]);
-                            if(!wasModified[h][w])
+                            //omp_set_lock(&locks[h][w]);
+                            if(omp_test_lock(&locks[h][w]))
                             {
                                 //std::cout << "lol" << std::endl;
                                 unsigned char r, g, b, a;
@@ -129,12 +129,12 @@ int main(int argc, char const *argv[])
                                     resultImage.GetPixel(w, h, &r, &g, &b, &a);
                                     resultImage.SetPixel(w, h, 255 -r, 255-g, 255-b, 255-a);
                                 }
-                                wasModified[h][w] = true;
-                                omp_unset_lock(&locks[h][w]);
+                                //wasModified[h][w] = true;
+                                //omp_unset_lock(&locks[h][w]);
                             }
                             else
                             {
-                                omp_unset_lock(&locks[h][w]);
+                                //omp_unset_lock(&locks[h][w]);
                                 continue;
                             }
                         }
