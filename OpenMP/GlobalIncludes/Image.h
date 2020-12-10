@@ -34,19 +34,19 @@ Image::Image(std::string filename)
     }
     else
     {
-        std::cout << "Loaded image " << filename << " successfully." << std::endl;
+        //std::cout << "Loaded image " << filename << " successfully." << std::endl;
     }
     
 }
 
 Image::Image(int newHorizSize, int newVertSize, int newChannels)
 {
-    std::cout << "Starting size constructor" << std::endl;
+    //std::cout << "Starting size constructor" << std::endl;
     channels = newChannels;
     vertSize = newVertSize;
     horizSize = newHorizSize;
     img = new unsigned char[horizSize * vertSize * channels];
-    std::cout << "Finished size constructor" << std::endl;
+    //std::cout << "Finished size constructor" << std::endl;
 }
 
 bool Image::GetPixel(int x, int y, unsigned char *r, unsigned char *g, unsigned char *b, unsigned char *a)
