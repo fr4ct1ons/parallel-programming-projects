@@ -11,6 +11,7 @@
 #include"stb_image_write.h"
 
 #include"Image.h"
+#include"testingAux.h"
 
 bool GetPixel(unsigned char *image, int horizSize, int vertSize, int x, int y, int channels, unsigned char *r, unsigned char *g, unsigned char *b, unsigned char *a)
 {
@@ -50,7 +51,7 @@ int main(int argc, char const *argv[])
 
     for (size_t i = 1; i < argc; i++)
     {
-        std::cout << "Param " << argv[i] << std::endl;
+        //std::cout << "Param " << argv[i] << std::endl;
 
         if(!strcmp(argv[i], "-result"))
         {
@@ -59,7 +60,7 @@ int main(int argc, char const *argv[])
         
         if (!strcmp(argv[i], "-debug"))
         {
-            std::cout << "OK" << std::endl;
+            std::cout << "Debug enabled." << std::endl;
             enableDebug = true;
         }
         
@@ -150,6 +151,15 @@ int main(int argc, char const *argv[])
 
     if(enableDebug)
         std::cout << "duration: " << duration << std::endl;
-    
+
+    std::stringstream results;
+
+    results << std::fixed  << mosaicHorizAmount * mosaicVertAmount * mosaicHorizSize * mosaicVertSize << " , " << duration << " , " << "SERIAL , 1" << std::endl;
+    TestingAux::WriteToResults(results);
+
+    if(enableDebug)
+    {
+        std::cout << results.str() << std::endl;
+    }
     return 0;
 }

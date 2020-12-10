@@ -2,7 +2,9 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 #include"stb_image.h"
+#include<iostream>
 #include<string>
+#include<cstdlib>
 
 class Image
 {
@@ -26,14 +28,25 @@ public:
 Image::Image(std::string filename)
 {
     img = stbi_load(filename.c_str(), &horizSize, &vertSize, &channels, 0);
+    if(img == NULL)
+    {
+        std::cout << "IMAGE INVALID - FILE: " << filename << std::endl;
+    }
+    else
+    {
+        std::cout << "Loaded image " << filename << " successfully." << std::endl;
+    }
+    
 }
 
 Image::Image(int newHorizSize, int newVertSize, int newChannels)
 {
-    img = new unsigned char[horizSize * vertSize * channels];
+    std::cout << "Starting size constructor" << std::endl;
     channels = newChannels;
     vertSize = newVertSize;
     horizSize = newHorizSize;
+    img = new unsigned char[horizSize * vertSize * channels];
+    std::cout << "Finished size constructor" << std::endl;
 }
 
 bool Image::GetPixel(int x, int y, unsigned char *r, unsigned char *g, unsigned char *b, unsigned char *a)
