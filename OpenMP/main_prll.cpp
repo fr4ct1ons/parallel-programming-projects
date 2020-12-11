@@ -95,19 +95,21 @@ int main(int argc, char const *argv[])
     
 
     clock_t begin = clock();
+    #pragma omp parallel num_threads(numThreads)
+    #pragma omp for
     for (long i = 0; i < image.VertSize(); i = i + (image.VertSize() / mosaicVertAmount))
     {
-        #pragma omp parallel num_threads(numThreads)
+        //
         {
             unsigned char midR = 0, midG = 0, midB = 0, midA =0;
-
-            //#pragma omp for
+            
+            
             for (long j = 0; j < image.HorizSize(); j = j + (image.HorizSize() / mosaicHorizAmount))
             {
                 long myI = i;
                 image.GetPixel(j, myI, &midR, &midG, &midB, &midA);
 
-                #pragma omp for
+                //#pragma omp for
                 for (long h = myI; h < myI + mosaicVertSize; h++)
                 {
                     for (long w = j; w < j + mosaicHorizSize; w++)
@@ -115,27 +117,29 @@ int main(int argc, char const *argv[])
                         if(!(h < 0 || h >= image.VertSize() ||
                            w < 0 || w >= image.HorizSize()))
                         {
-                            //omp_set_lock(&locks[h][w]);
-                            if(omp_test_lock(&locks[h][w]))
-                            {
-                                //std::cout << "lol" << std::endl;
-                                unsigned char r, g, b, a;
 
-                                image.GetPixel(w, h, &r, &g, &b, &a);
-                                resultImage.SetPixel(w, h, midR, midG, midB, midA);
-                                
-                                for (size_t t = 0; t < inverseAmount; t++)
-                                {
-                                    resultImage.GetPixel(w, h, &r, &g, &b, &a);
-                                    resultImage.SetPixel(w, h, 255 -r, 255-g, 255-b, 255-a);
-                                }
-                                //wasModified[h][w] = true;
-                                //omp_unset_lock(&locks[h][w]);
-                            }
-                            else
                             {
-                                //omp_unset_lock(&locks[h][w]);
-                                continue;
+                                if(omp_test_lock(&locks[h][w]))
+                                {
+                                    //std::cout << "lol" << std::endl;
+                                    unsigned char r, g, b, a;
+
+                                    image.GetPixel(w, h, &r, &g, &b, &a);
+                                    resultImage.SetPixel(w, h, midR, midG, midB, midA);
+                                    
+                                    for (size_t t = 0; t < inverseAmount; t++)
+                                    {
+                                        resultImage.GetPixel(w, h, &r, &g, &b, &a);
+                                        resultImage.SetPixel(w, h, 255 -r, 255-g, 255-b, 255-a);
+                                    }
+                                    //wasModified[h][w] = true;
+                                    //omp_unset_lock(&locks[h][w]);
+                                }
+                                else
+                                {
+                                    //omp_unset_lock(&locks[h][w]);
+                                    //continue;
+                                }
                             }
                         }
                         
